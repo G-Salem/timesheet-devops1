@@ -23,6 +23,7 @@ public class User implements Serializable {
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long id;   
+	// modification gittt 
 	
 	//@Column(name="USR_FIRST_NAME", length=20, unique=true, nullable=false)
 	private String firstName; 
