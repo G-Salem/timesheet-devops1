@@ -20,7 +20,7 @@ import tn.esprit.spring.services.IUserService;
 public class UserServiceImplTest {
 	@Autowired
 	IUserService us;
-
+	/*
 	@Test
 	@Order(1)
 	public void testRetrieveAllUsers() {
@@ -62,7 +62,7 @@ public class UserServiceImplTest {
 	public void testDeleteUser() {
 		us.deleteUser("7");
 		Assertions.assertNull(us.retrieveUser("7"));
-	}
+	}*/
 	 
 	 
 	

@@ -38,7 +38,6 @@ public class UserServiceImpl implements IUserService {
 		return users;
 	}
 
-
 	@Override
 	public User addUser(User u) {
 		l.info("In method addUser");
