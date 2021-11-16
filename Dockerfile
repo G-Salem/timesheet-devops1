@@ -1,4 +1,4 @@
 FROM openjdk:8-jdk-alpine
 EXPOSE 8082
-ADD ../timesheet-devops1/target/timesheet-devops-1.0.jar timesheet-devops-1.0.jar
+ADD --from=/target/timesheet-devops-1.0.jar timesheet-devops-1.0.jar
 ENTRYPOINT ["java","jar","/timesheet-devops1-1.0.jar"]
