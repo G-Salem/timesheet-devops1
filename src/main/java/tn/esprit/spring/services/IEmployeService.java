@@ -9,5 +9,5 @@ public interface IEmployeService {
 	Employe addEmploye(Employe e);
 	void deleteEmploye(String id);
 	Employe updateEmploye(Employe e);
-	Employe retrieveEmploye(String id);
+	Employe retrieveEmploye(String i);
 }

@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import tn.esprit.spring.entities.Employe;
-import tn.esprit.spring.entities.User;
 import tn.esprit.spring.repository.EmployeRepository;
 
 @Service
@@ -60,15 +59,16 @@ public class EmployeServiceImpl implements IEmployeService{
 
 	@Override
 	public Employe retrieveEmploye(String id) {
-		Employe e = null;
+		Employe em = null;
 		try{
 		l.info("In method retrieveEmploye");
-		 e =  emplRepository.findById(Long.parseLong(id)).get(); 
+		 em = emplRepository.findById(Long.parseLong(id)).get();
+		 l.info(em);
 		l.info("OUT of  method retrieveEmploye with SUCCESS");
-		} catch (Exception ex) {
-			l.error("error in retrieveEmploye : " + ex);
+		} catch (Exception e) {
+			l.error("error in retrieveEmploye : " + e);
 		}
-		return e; 
+		return em; 
 	}
 
 }

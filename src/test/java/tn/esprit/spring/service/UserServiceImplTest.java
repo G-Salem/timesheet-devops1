@@ -20,12 +20,12 @@ import tn.esprit.spring.services.IUserService;
 public class UserServiceImplTest {
 	@Autowired
 	IUserService us;
-	/*
+	
 	@Test
 	@Order(1)
 	public void testRetrieveAllUsers() {
 		List<User> listUsers = us.retrieveAllUsers();
-		Assertions.assertEquals(6, listUsers.size());
+		Assertions.assertEquals(0, listUsers.size());
 	}
 	
 	@Test
@@ -34,7 +34,7 @@ public class UserServiceImplTest {
 		
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		Date d = dateFormat.parse("2015-05-23");
-		User u = new User ("sas","salsssm",d,Role.STUDENT);
+		User u = new User ("samir","999",d,Role.STUDENT);
 		User userAdded = us.addUser(u);
 		Assertions.assertEquals(u.getLastName() , userAdded.getLastName());
 	}
@@ -45,24 +45,24 @@ public class UserServiceImplTest {
 		
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		Date d = dateFormat.parse("2015-05-23");
-		User u = new User (9L,"MO","MO",d,Role.STUDENT);
+		User u = new User (1L,"MO","SALAH",d,Role.STUDENT);
 		User userupdated = us.updateUser(u);
 		Assertions.assertEquals(u.getLastName() , userupdated.getLastName());
 	}
-	
+		
 	@Test
 	@Order(4)
 	public void testRetrieveUser() {
-		User userRetieved = us.retrieveUser("2");
-		Assertions.assertEquals(2L, userRetieved.getId().longValue());
+		User userRetieved = us.retrieveUser("1");
+		Assertions.assertEquals(1L, userRetieved.getId().longValue());
 	}
 	
 	@Test
 	@Order(5)
 	public void testDeleteUser() {
-		us.deleteUser("7");
-		Assertions.assertNull(us.retrieveUser("7"));
-	}*/
+		us.deleteUser("1");
+		Assertions.assertNull(us.retrieveUser("1"));
+	}
 	 
 	 
 	
